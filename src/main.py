@@ -1,7 +1,7 @@
 import os
-import src.converter as converter
-import src.bcolors as bcolors
-import src.config_parser as config_parser
+import converter as converter
+import bcolors as bcolors
+import config_parser as config_parser
 import time
 
 

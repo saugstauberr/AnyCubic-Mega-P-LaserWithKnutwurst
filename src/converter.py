@@ -1,6 +1,6 @@
-import src.bcolors as bcolors
-import src.requirements as requirements
-import src.config_parser as config_parser
+import bcolors as bcolors
+import requirements as requirements
+import config_parser as config_parser
 
 def convert_gcode(file):
     remove_before_line = config_parser.read("remove_before_line")
