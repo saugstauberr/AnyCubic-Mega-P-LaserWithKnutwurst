@@ -3,21 +3,19 @@ import converter as converter
 import bcolors as bcolors
 import config_parser as config_parser
 import time
+import requirements as requirements
 
 
 gcode_files = []
 selected_gcode_file = ""
 
-# ggf. notwendige Ordner erstellen und alle gcode Dateien auflisten
-if not os.path.isdir('gcode'):
-    os.makedirs("gcode")
+# Check if all required files are existing, if not create
+requirements.check_requirements()
 
-if not os.path.isdir('output'):
-    os.makedirs("output")
-
+# List all existing .gcode files in gcode folder
 for file in os.listdir("gcode"):
-    if file.endswith(".gcode"):
-        gcode_files.append("gcode/" + file)
+        if file.endswith(".gcode"):
+            gcode_files.append("gcode/" + file)
 
 # Begrüßung
 print(bcolors.HEADER + "Willkommen im GCode-Converter!")

@@ -8,7 +8,7 @@ def convert_gcode(file):
     with open(file, 'r') as textfile:
         content = textfile.read().splitlines()
 
-        requirements.check_requirements(content)
+        requirements.check_remove_before_line(content)
 
         layer_pos = content.index(remove_before_line) - 1
         layer_pos_i = 0

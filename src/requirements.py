@@ -1,7 +1,18 @@
+import os
 import bcolors as bcolors
 import config_parser as config_parser
 
-def check_requirements(content):
+def check_requirements():
+    if not os.path.isdir('gcode'):
+        os.makedirs("gcode")
+
+    if not os.path.isdir('output'):
+        os.makedirs("output")
+
+
+    
+
+def check_remove_before_line(content):
     remove_before_line = config_parser.read('remove_before_line')
 
 
